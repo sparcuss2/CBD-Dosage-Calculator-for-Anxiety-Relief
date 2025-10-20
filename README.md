@@ -1,5 +1,11 @@
 # CBD Dosage Calculator
+# Free CBD Dosage Calculator for Anxiety Relief 🌿
 
+This open-source **CBD Dosage Calculator App** helps users find the right CBD oil dosage for anxiety based on their body weight and symptoms.  
+Built with **HTML, CSS, and JavaScript**, this tool is simple, accurate, and mobile-friendly.
+
+## Keywords
+cbd, cbd dosage, cbd for anxiety, cbd calculator, anxiety relief, cbd oil, dosage calculator, cbd app, cbd tools, html css javascript project
 A **free CBD Dosage Calculator** that instantly calculates personalized CBD doses based on **body weight** and **anxiety level**.
 
 ---
