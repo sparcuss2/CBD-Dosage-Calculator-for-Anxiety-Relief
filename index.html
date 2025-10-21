@@ -3,120 +3,200 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CBD Dosage Calculator for Anxiety</title>
+  <title>Free CBD Dosage Calculator</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #e0f7f4, #b3e6d8);
+      background: #f4f9f8;
       color: #333;
-      text-align: center;
-      padding: 30px;
+      margin: 0;
+      padding: 0;
     }
+
+    header {
+      text-align: center;
+      color: white;
+      background: #008b7d;
+      padding: 1.2em;
+    }
+
+    .banner {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-bottom: 3px solid #008b7d;
+    }
+
     .container {
       max-width: 400px;
       background: white;
-      margin: auto;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 2em auto;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    input, select, button {
-      width: 90%;
-      margin: 10px 0;
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-    }
-    button {
-      background: #00b894;
-      color: white;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #019875;
-    }
-    .result {
-      margin-top: 20px;
+
+    label {
+      display: block;
+      margin-top: 1em;
       font-weight: bold;
-      color: #00695c;
     }
-    .links {
-      margin-top: 25px;
+
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 0.5em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
     }
-    .links a {
-      display: inline-block;
-      margin: 8px;
-      padding: 10px 15px;
-      background: #00796b;
+
+    button {
+      background: #008b7d;
       color: white;
-      text-decoration: none;
-      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
     }
-    .links a:hover {
-      background: #004d40;
+
+    button:hover {
+      background: #006f63;
+    }
+
+    .result {
+      margin-top: 1.5em;
+      font-size: 1.1em;
+      color: #006f63;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .affiliate-links {
+      text-align: center;
+      margin-top: 1.5em;
+    }
+
+    .affiliate-links a {
+      display: inline-block;
+      background-color: #3bb273;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin: 5px;
+      font-weight: bold;
+    }
+
+    .affiliate-links a:hover {
+      background-color: #2e8b57;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+      color: #555;
     }
   </style>
 </head>
 <body>
+
+  <!-- ✅ Banner -->
+  <img src="https://raw.githubusercontent.com/iamtheoassets/cbd-banner/main/banner.png" 
+       alt="CBD Dosage Calculator Banner" 
+       class="banner">
+
+  <header>
+    <h1>Free CBD Dosage Calculator</h1>
+    <p>Find your personalized CBD dose by weight and anxiety level</p>
+  </header>
+
+  <!-- ✅ Main Calculator -->
   <div class="container">
-    <h1>CBD Dosage Calculator</h1>
-    <p>Find your ideal daily CBD dosage for anxiety relief.</p>
+    <label for="weight">Enter your weight (lbs):</label>
+    <input type="number" id="weight" placeholder="e.g. 150" />
 
-    <label for="weight">Your Weight (lbs):</label><br>
-    <input type="number" id="weight" placeholder="Enter weight" /><br>
-
-    <label for="anxietyLevel">Anxiety Level:</label><br>
-    <select id="anxietyLevel">
+    <label for="anxiety">Select anxiety level:</label>
+    <select id="anxiety">
       <option value="low">Low</option>
       <option value="medium">Medium</option>
       <option value="high">High</option>
-    </select><br>
+    </select>
 
-    <label for="strength">CBD Oil Strength (mg per mL):</label><br>
-    <input type="number" id="strength" placeholder="e.g. 25" /><br>
-
-    <button onclick="calculateDosage()">Calculate</button>
+    <button onclick="calculateDosage()">Calculate Dosage</button>
 
     <div class="result" id="result"></div>
+
+    <!-- ✅ Drops Calculator Section -->
+    <section style="margin-top: 30px; background: #f0fff0; padding: 20px; border-radius: 10px;">
+      <h2>💧 CBD Oil Drops Estimator</h2>
+      <p>Estimate how many drops equal your personalized dose.</p>
+
+      <label for="bottleStrength">Bottle Strength (mg):</label>
+      <input type="number" id="bottleStrength" placeholder="e.g. 600">
+
+      <label for="bottleSize">Bottle Size (ml):</label>
+      <input type="number" id="bottleSize" placeholder="e.g. 30">
+
+      <label for="doseMg">Your CBD Dose (mg):</label>
+      <input type="number" id="doseMg" placeholder="e.g. 25">
+
+      <button onclick="calculateDrops()">Calculate Drops</button>
+      <h3 id="dropsResult" style="margin-top:20px; color:#333;"></h3>
+    </section>
+
+    <!-- ✅ Affiliate Links -->
+    <div class="affiliate-links">
+      <a href="https://www.cbdpure.com/aff/D30F38A4D1289E0197127F931C2D9900/index.html" target="_blank">
+        🌿 Buy CBDPure 600mg
+      </a>
+      <a href="https://track.revoffers.com/SH4iu" target="_blank">
+        🛒 Shop All CBD Products
+      </a>
+    </div>
   </div>
+
+  <footer>
+    © 2025 Free CBD Dosage Calculator | For educational purposes only
+  </footer>
 
   <script>
     function calculateDosage() {
       const weight = parseFloat(document.getElementById("weight").value);
-      const level = document.getElementById("anxietyLevel").value;
-      const strength = parseFloat(document.getElementById("strength").value);
+      const anxiety = document.getElementById("anxiety").value;
       const resultDiv = document.getElementById("result");
 
-      if (!weight || !strength) {
-        resultDiv.innerHTML = "⚠️ Please enter your weight and oil strength.";
+      if (isNaN(weight) || weight <= 0) {
+        resultDiv.textContent = "Please enter a valid weight.";
         return;
       }
 
-      let mgPerLb;
-      if (level === "low") mgPerLb = 0.15;
-      else if (level === "medium") mgPerLb = 0.25;
-      else mgPerLb = 0.45;
+      let dosagePerLb;
+      if (anxiety === "low") dosagePerLb = 0.25;
+      else if (anxiety === "medium") dosagePerLb = 0.5;
+      else dosagePerLb = 0.75;
 
-      const totalMg = (weight * mgPerLb).toFixed(1);
-      const mlPerDay = (totalMg / strength).toFixed(2);
-      const dropsPerDay = (mlPerDay * 30).toFixed(0);
+      const dosage = (weight * dosagePerLb).toFixed(2);
+      resultDiv.textContent = `Suggested CBD dosage: ${dosage} mg per day.`;
+      document.getElementById("doseMg").value = dosage;
+    }
 
-      resultDiv.innerHTML = `
-        <p>✅ Suggested daily CBD dosage: <strong>${totalMg} mg</strong></p>
-        <p>That equals about <strong>${mlPerDay} mL</strong> or <strong>${dropsPerDay} drops</strong> per day.</p>
-        <p>💡 Tip: Start with half this amount for the first week and increase slowly.</p>
+    function calculateDrops() {
+      const strength = parseFloat(document.getElementById('bottleStrength').value);
+      const size = parseFloat(document.getElementById('bottleSize').value);
+      const dose = parseFloat(document.getElementById('doseMg').value);
 
-        <div class="links">
-          <a href="https://www.cbdpure.com/aff/D30F38A4D1289E0197127F931C2D9900/index.html" target="_blank">
-            🌿 Buy CBDPure 600mg (Recommended)
-          </a>
-          <a href="https://track.revoffers.com/SH4iu" target="_blank">
-            🛒 View All CBD Products
-          </a>
-        </div>
-      `;
+      if (!strength || !size || !dose) {
+        document.getElementById('dropsResult').innerHTML = "Please enter all values.";
+        return;
+      }
+
+      const mgPerDrop = strength / (size * 20);
+      const dropsNeeded = dose / mgPerDrop;
+
+      document.getElementById('dropsResult').innerHTML =
+        `💧 You need approximately <strong>${dropsNeeded.toFixed(1)}</strong> drops for your ${dose}mg dose.`;
     }
   </script>
+
 </body>
 </html>
