@@ -70,6 +70,22 @@
       text-align: center;
     }
 
+    .share-buttons {
+      text-align: center;
+      margin-top: 1em;
+    }
+
+    .share-buttons button {
+      background-color: #3bb273;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
     .affiliate-links {
       text-align: center;
       margin-top: 1.5em;
@@ -126,7 +142,7 @@
 
     <div class="result" id="result"></div>
 
-    <!-- ✅ Drops Calculator Section -->
+    <!-- ✅ Drops Calculator -->
     <section style="margin-top: 30px; background: #f0fff0; padding: 20px; border-radius: 10px;">
       <h2>💧 CBD Oil Drops Estimator</h2>
       <p>Estimate how many drops equal your personalized dose.</p>
@@ -144,6 +160,12 @@
       <h3 id="dropsResult" style="margin-top:20px; color:#333;"></h3>
     </section>
 
+    <!-- ✅ Share Results -->
+    <div class="share-buttons">
+      <button onclick="copyResults()">📋 Copy Result</button>
+      <button onclick="shareResults()">📤 Share Result</button>
+    </div>
+
     <!-- ✅ Affiliate Links -->
     <div class="affiliate-links">
       <a href="https://www.cbdpure.com/aff/D30F38A4D1289E0197127F931C2D9900/index.html" target="_blank">
@@ -160,6 +182,8 @@
   </footer>
 
   <script>
+    let lastResultText = '';
+
     function calculateDosage() {
       const weight = parseFloat(document.getElementById("weight").value);
       const anxiety = document.getElementById("anxiety").value;
@@ -178,6 +202,7 @@
       const dosage = (weight * dosagePerLb).toFixed(2);
       resultDiv.textContent = `Suggested CBD dosage: ${dosage} mg per day.`;
       document.getElementById("doseMg").value = dosage;
+      lastResultText = resultDiv.textContent;
     }
 
     function calculateDrops() {
@@ -193,8 +218,35 @@
       const mgPerDrop = strength / (size * 20);
       const dropsNeeded = dose / mgPerDrop;
 
-      document.getElementById('dropsResult').innerHTML =
-        `💧 You need approximately <strong>${dropsNeeded.toFixed(1)}</strong> drops for your ${dose}mg dose.`;
+      const dropsResultText = `💧 You need approximately ${dropsNeeded.toFixed(1)} drops for your ${dose}mg dose.`;
+      document.getElementById('dropsResult').innerHTML = dropsResultText;
+      lastResultText = `${lastResultText}\n${dropsResultText}`;
+    }
+
+    async function copyResults() {
+      if (!lastResultText) {
+        alert("Please calculate your dosage first!");
+        return;
+      }
+      await navigator.clipboard.writeText(lastResultText);
+      alert("✅ Result copied to clipboard!");
+    }
+
+    function shareResults() {
+      if (!lastResultText) {
+        alert("Please calculate your dosage first!");
+        return;
+      }
+
+      if (navigator.share) {
+        navigator.share({
+          title: "My CBD Dosage Result",
+          text: lastResultText,
+          url: window.location.href
+        });
+      } else {
+        alert("Sharing is not supported on this device.");
+      }
     }
   </script>
 
