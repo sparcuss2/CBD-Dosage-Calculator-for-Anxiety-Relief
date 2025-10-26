@@ -4,181 +4,160 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CBD Dosage Calculator for Anxiety Relief (2025 Guide)</title>
-  <meta name="description" content="Free CBD dosage calculator that estimates your perfect CBD oil dose for anxiety based on weight and anxiety level. Includes instant results and trusted product links." />
-  <meta name="keywords" content="CBD dosage calculator, CBD oil dosage, CBD anxiety relief, CBDPure 600mg dosage chart" />
+  <meta name="description" content="Free CBD dosage calculator for anxiety. Find your ideal CBD dose by weight, anxiety level, and oil strength — includes affiliate recommendations." />
+  <meta name="keywords" content="CBD dosage calculator, CBD oil dosage for anxiety, CBD dosage by weight, how much CBD should I take, CBDPure 600mg, CBD dosage chart" />
   <link rel="canonical" href="https://anxietyreliefcbd.com/cbd-dosage-calculator/" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- Schema for Google Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "CBD Dosage Calculator for Anxiety",
+    "url": "https://anxietyreliefcbd.com/cbd-dosage-calculator/",
+    "description": "Free CBD dosage calculator for anxiety. Find your ideal CBD dose by weight, anxiety level, and oil strength. Includes affiliate recommendations.",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "All"
+  }
+  </script>
 
   <style>
-    :root {
-      --primary: #2b8a3e;
-      --secondary: #4caf50;
-      --light: #e7f9ec;
-    }
-
     body {
       font-family: "Inter", Arial, sans-serif;
-      background: linear-gradient(180deg, #f9fcfa, #ffffff);
+      background-color: #f5f9f7;
       color: #333;
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
     }
-
-    /* Animated gradient banner */
     header {
-      background: linear-gradient(270deg, #2b8a3e, #4caf50, #34a853);
-      background-size: 600% 600%;
-      animation: gradientMove 8s ease infinite;
-      color: white;
+      background: linear-gradient(120deg, #2b8a3e, #4caf50);
+      color: #fff;
       text-align: center;
-      padding: 60px 25px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+      padding: 40px 20px;
+      position: relative;
     }
-
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    header img.logo {
+      width: 120px;
+      height: auto;
+      display: block;
+      margin: 0 auto 15px;
     }
-
+    header img.banner {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
     header h1 {
-      font-size: 2.2em;
+      font-size: 2em;
       margin: 0;
-      letter-spacing: 0.5px;
     }
-
     header p {
       margin-top: 10px;
       font-size: 1.1em;
-      opacity: 0.95;
     }
-
     main {
-      max-width: 850px;
-      margin: 40px auto;
+      max-width: 800px;
+      margin: 30px auto;
       background: #fff;
-      padding: 30px;
-      border-radius: 14px;
-      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
-      animation: fadeIn 1s ease-in-out;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     h2 {
-      color: var(--primary);
+      color: #2b8a3e;
       margin-top: 30px;
     }
-
     .calculator {
-      background: var(--light);
+      background: #f8fcf9;
       padding: 20px;
       border-radius: 10px;
       margin-top: 20px;
     }
-
     label {
       display: block;
       margin: 10px 0 5px;
       font-weight: bold;
     }
-
     input, select, button {
       width: 100%;
-      padding: 12px;
-      border-radius: 6px;
+      padding: 10px;
+      border-radius: 5px;
       border: 1px solid #ccc;
       margin-bottom: 15px;
-      font-size: 1em;
     }
-
     button {
-      background: var(--primary);
+      background-color: #2b8a3e;
       color: #fff;
-      border: none;
       font-size: 1em;
-      font-weight: bold;
+      border: none;
       cursor: pointer;
-      border-radius: 6px;
-      box-shadow: 0 0 10px rgba(43, 138, 62, 0.3);
-      transition: all 0.3s ease;
     }
-
     button:hover {
-      background: #256f34;
-      box-shadow: 0 0 15px rgba(43, 138, 62, 0.5);
+      background-color: #256f34;
     }
-
     .result {
       margin-top: 20px;
       padding: 15px;
-      background: #dff7e5;
+      background: #e7f9ec;
       border-radius: 10px;
-      text-align: center;
-      font-size: 1.1em;
-      animation: fadeUp 0.8s ease-in-out;
     }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
     a.btn {
       display: inline-block;
       margin-top: 15px;
-      padding: 12px 24px;
-      background: linear-gradient(120deg, #2b8a3e, #4caf50);
+      padding: 10px 20px;
+      background: #2b8a3e;
       color: #fff;
-      border-radius: 8px;
+      border-radius: 5px;
       text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 12px rgba(43,138,62,0.4);
     }
-
     a.btn:hover {
-      background: linear-gradient(120deg, #34a853, #2b8a3e);
-      box-shadow: 0 0 18px rgba(43,138,62,0.6);
+      background: #256f34;
     }
-
     footer {
       text-align: center;
       padding: 25px;
       background: #f5f5f5;
       color: #777;
       font-size: 0.9em;
-      margin-top: 60px;
+      margin-top: 50px;
     }
-
-    /* Scroll reveal effect */
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease;
+    .affiliate-links {
+      text-align: center;
+      margin-top: 30px;
     }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .affiliate-links a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 18px;
+      background: #2b8a3e;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .affiliate-links a:hover {
+      background: #256f34;
     }
   </style>
 </head>
 <body>
 
   <header>
+    <img src="logo.png" alt="CBD Dosage Calculator Logo" class="logo" />
+    <img src="banner.png" alt="CBD Dosage Banner" class="banner" />
     <h1>CBD Dosage Calculator for Anxiety Relief (2025)</h1>
-    <p>Find your ideal dose — balance your body and calm your mind 🌿</p>
+    <p>Find your ideal CBD dosage for anxiety — customized to your body weight and anxiety level.</p>
   </header>
 
   <main>
-    <section class="intro reveal">
-      <p>Finding the right <strong>CBD dosage for anxiety</strong> can be confusing — too little may not help, and too much can cause drowsiness. Use this free calculator to estimate the best amount for your body.</p>
+    <section class="intro">
+      <p>Finding the right <strong>CBD oil dosage for anxiety</strong> can be confusing — too little may not help, and too much can make you feel tired. This free CBD dosage calculator helps you determine the perfect amount for your body, so you can experience calm, balance, and relief.</p>
     </section>
 
-    <section class="calculator reveal">
+    <section class="calculator">
       <h2>Calculate Your CBD Dosage</h2>
       <label for="weight">Your Weight (lbs):</label>
       <input type="number" id="weight" placeholder="e.g. 160">
@@ -198,35 +177,40 @@
       <div id="result" class="result" style="display:none;"></div>
     </section>
 
-    <section class="info reveal">
-      <h2>How This Calculator Works</h2>
-      <p>We estimate dosage based on <strong>0.1–0.45 mg CBD per pound</strong> depending on anxiety severity.</p>
+    <section class="info">
+      <h2>How This CBD Dosage Calculator Works</h2>
+      <p>Our algorithm uses your weight and anxiety level to estimate a safe and effective daily CBD dosage. It’s based on research showing typical ranges of <strong>0.1mg – 0.5mg per pound of body weight</strong> depending on symptom severity.</p>
+
       <ul>
-        <li>Mild: 0.1 mg/lb</li>
-        <li>Moderate: 0.25 mg/lb</li>
-        <li>Severe: 0.45 mg/lb</li>
+        <li><strong>Mild anxiety:</strong> 0.1 mg CBD per pound</li>
+        <li><strong>Moderate anxiety:</strong> 0.25 mg CBD per pound</li>
+        <li><strong>Severe anxiety:</strong> 0.45 mg CBD per pound</li>
       </ul>
 
-      <a href="https://www.cbdpure.com/aff/D30F38A4D1289E0197127F931C2D9900/index.html" target="_blank" class="btn">Buy CBDPure 600mg 🌿</a>
-      <br>
-      <a href="https://track.revoffers.com/SH4iu" target="_blank" class="btn">See All CBD Products 💧</a>
+      <p>Results are estimates — always start low and increase gradually while observing how your body responds.</p>
+
+      <div class="affiliate-links">
+        <a href="https://www.cbdpure.com/aff/D30F38A4D1289E0197127F931C2D9900/index.html" target="_blank">Buy CBDPure 600 🌿</a>
+        <a href="https://track.revoffers.com/SH4iu" target="_blank">Shop All CBD Products 🛍️</a>
+      </div>
     </section>
 
-    <section class="faq reveal">
-      <h2>FAQ</h2>
-      <h3>How many drops should I take?</h3>
-      <p>For a 600mg bottle, each drop ≈ 1mg CBD. If your daily dose is 30mg, take 15 drops twice a day.</p>
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
 
-      <h3>Is this calculator suitable for beginners?</h3>
-      <p>Yes — it gives conservative starting points so you can gradually increase based on comfort.</p>
+      <h3>How many drops of CBD oil should I take?</h3>
+      <p>It depends on your oil’s potency. For a 600mg bottle, one drop usually equals 1mg CBD. So if your daily dose is 30mg, take 15 drops twice a day.</p>
 
-      <h3>Which product works best for anxiety?</h3>
-      <p>We recommend <strong>CBDPure 600mg</strong> for balance, purity, and reliable results.</p>
+      <h3>Can I use this calculator for other conditions?</h3>
+      <p>Yes, you can use it for general wellness, stress relief, or sleep improvement. Just adjust your “anxiety level” to match symptom intensity.</p>
+
+      <h3>What’s the best CBD oil for anxiety?</h3>
+      <p>We recommend <strong>CBDPure 600mg</strong> because it’s organic, full-spectrum, and third-party tested. It provides steady calm without drowsiness.</p>
     </section>
   </main>
 
   <footer>
-    <p>Disclaimer: This calculator is for educational use only and not a substitute for medical advice. | © 2025 AnxietyReliefCBD.com</p>
+    <p>Disclaimer: This calculator provides general information only and is not a substitute for medical advice. Always consult your healthcare provider before starting CBD. | © 2025 AnxietyReliefCBD.com</p>
   </footer>
 
   <script>
@@ -252,20 +236,11 @@
       document.getElementById('result').innerHTML = `
         <h3>Your Recommended CBD Dosage</h3>
         <p><strong>${dailyMg} mg/day</strong> total, or <strong>${perDose} mg</strong> twice daily.</p>
-        <a href="https://www.cbdpure.com/aff/D30F38A4D1289E0197127F931C2D9900/index.html" target="_blank" class="btn">Buy CBDPure 600mg 🌿</a>
-        <p style="font-size:13px;margin-top:10px;">*Start low and increase gradually as needed.</p>
+        <p>Based on your results, we suggest:</p>
+        <a href="https://www.cbdpure.com/aff/D30F38A4D1289E0197127F931C2D9900/index.html" target="_blank" class="btn">Buy CBDPure 600 🌿</a>
+        <p style="font-size:13px;margin-top:10px;">*Start low and go slow. Adjust dosage as needed.</p>
       `;
     }
-
-    // Scroll reveal effect
-    window.addEventListener("scroll", () => {
-      document.querySelectorAll(".reveal").forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 50) {
-          el.classList.add("visible");
-        }
-      });
-    });
   </script>
 </body>
 </html>
