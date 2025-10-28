@@ -3,10 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CBD Dosage Calculator for Anxiety Relief (2025 Guide)</title>
-  <meta name="description" content="Free CBD dosage calculator for anxiety. Find your ideal CBD dose by weight, anxiety level, and oil strength — includes affiliate recommendations." />
-  <meta name="keywords" content="CBD dosage calculator, CBD oil dosage for anxiety, CBD dosage by weight, how much CBD should I take, CBDPure 600mg, CBD dosage chart" />
+
+  <title>Free CBD Dosage Calculator for Anxiety & Stress Relief (2025)</title>
+
+  <meta name="description" content="Free CBD Dosage Calculator for Anxiety & Stress Relief (2025). Instantly calculate your perfect CBD oil dose based on weight, anxiety level, and oil strength. Discover how much CBD to take for calm, focus, and wellness. Works with CBDPure, CBDFx & top CBD brands." />
+
+  <meta name="keywords" content="cbd, cbd dosage calculator, cbd oil dosage, cbd for anxiety, cbd for stress, cbd dosage for anxiety, cbdpure, cbdfx, cbd wellness, cbd oil strength, cbd anxiety relief, natural calm, stress relief, wellness calculator, cbd dosage app, cbd dosage tool, anxiety relief app, cbd drops dosage, cbd tincture, holistic health" />
+
   <link rel="canonical" href="https://anxietyreliefcbd.com/cbd-dosage-calculator/" />
+  <meta name="author" content="AnxietyReliefCBD.com" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="Free CBD Dosage Calculator for Anxiety & Stress Relief (2025)" />
+  <meta property="og:description" content="Find your ideal CBD dosage by weight, anxiety level, and oil strength. The easiest CBD dosage calculator for anxiety relief and wellness." />
+  <meta property="og:url" content="https://anxietyreliefcbd.com/cbd-dosage-calculator/" />
+  <meta property="og:site_name" content="AnxietyReliefCBD" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free CBD Dosage Calculator for Anxiety & Stress Relief (2025)" />
+  <meta name="twitter:description" content="Instantly calculate your perfect CBD dosage for calm, focus, and wellness. Works with CBDPure, CBDFx & top CBD brands." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <!-- Schema for Google Rich Snippets -->
   <script type="application/ld+json">
@@ -17,10 +39,21 @@
     "url": "https://anxietyreliefcbd.com/cbd-dosage-calculator/",
     "description": "Free CBD dosage calculator for anxiety. Find your ideal CBD dose by weight, anxiety level, and oil strength. Includes affiliate recommendations.",
     "applicationCategory": "HealthApplication",
-    "operatingSystem": "All"
+    "operatingSystem": "All",
+    "author": {
+      "@type": "Organization",
+      "name": "AnxietyReliefCBD"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.cbdpure.com/aff/D30F38A4D1289E0197127F931C2D9900/index.html",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
   }
   </script>
 
+  <!-- Style -->
   <style>
     body {
       font-family: "Inter", Arial, sans-serif;
@@ -34,15 +67,12 @@
       color: #fff;
       text-align: center;
       padding: 40px 20px;
-      position: relative;
     }
-    /* removed image styles (no logo/banner) */
     header h1 {
       font-size: 2em;
-      margin: 0;
+      margin-bottom: 10px;
     }
     header p {
-      margin-top: 10px;
       font-size: 1.1em;
     }
     main {
@@ -74,7 +104,6 @@
       border-radius: 5px;
       border: 1px solid #ccc;
       margin-bottom: 15px;
-      box-sizing: border-box;
     }
     button {
       background-color: #2b8a3e;
@@ -131,10 +160,10 @@
     }
   </style>
 </head>
+
 <body>
 
   <header>
-    <!-- Images removed: logo/banner omitted -->
     <h1>CBD Dosage Calculator for Anxiety Relief (2025)</h1>
     <p>Find your ideal CBD dosage for anxiety — customized to your body weight and anxiety level.</p>
   </header>
@@ -146,6 +175,7 @@
 
     <section class="calculator">
       <h2>Calculate Your CBD Dosage</h2>
+
       <label for="weight">Your Weight (lbs):</label>
       <input type="number" id="weight" placeholder="e.g. 160">
 
@@ -186,7 +216,7 @@
       <h2>Frequently Asked Questions</h2>
 
       <h3>How many drops of CBD oil should I take?</h3>
-      <p>It depends on your oil’s potency. For a 600mg bottle, one drop usually equals 1mg CBD. So if your daily dose is 30mg, take 15 drops twice a day.</p>
+      <p>It depends on your oil’s potency. For a 600mg bottle, one drop usually equals 1mg CBD. So if your daily dose is 30mg, take about 15 drops twice a day.</p>
 
       <h3>Can I use this calculator for other conditions?</h3>
       <p>Yes, you can use it for general wellness, stress relief, or sleep improvement. Just adjust your “anxiety level” to match symptom intensity.</p>
@@ -218,16 +248,18 @@
 
       const dailyMg = (weight * mgPerLb).toFixed(2);
       const perDose = (dailyMg / 2).toFixed(2);
+      const drops = Math.round(perDose); // assuming 1 drop ≈ 1mg
 
       document.getElementById('result').style.display = 'block';
       document.getElementById('result').innerHTML = `
         <h3>Your Recommended CBD Dosage</h3>
         <p><strong>${dailyMg} mg/day</strong> total, or <strong>${perDose} mg</strong> twice daily.</p>
-        <p>Based on your results, we suggest:</p>
+        <p>That equals about <strong>${drops} drops</strong> per dose if using a 600mg bottle.</p>
         <a href="https://www.cbdpure.com/aff/D30F38A4D1289E0197127F931C2D9900/index.html" target="_blank" class="btn">Buy CBDPure 600 🌿</a>
         <p style="font-size:13px;margin-top:10px;">*Start low and go slow. Adjust dosage as needed.</p>
       `;
     }
   </script>
+
 </body>
 </html>
