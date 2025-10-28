@@ -1,141 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Free CBD Dosage Calculator App – Find your perfect CBD dosage for anxiety, stress, and relaxation based on your body weight, experience, and condition. Easy-to-use and scientifically accurate for 2025. Try now for free!" />
-  <meta name="keywords" content="CBD dosage calculator, CBD for anxiety, best CBD dosage, CBDPure, CBD dosage app, calculate CBD dose, CBD oil dosage, free CBD calculator, CBD guide, CBDPure 600" />
-  <meta name="author" content="Free CBD Dosage Calculator" />
-  <meta property="og:title" content="Free CBD Dosage Calculator | CBDPure Affiliate Tool" />
-  <meta property="og:description" content="Discover your ideal CBD dosage for anxiety and stress. Use our free calculator and find top-quality CBD products recommended for you." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yourusername.github.io/Free-CBD-Dosage-Calculator/" />
-  <meta property="og:site_name" content="Free CBD Dosage Calculator" />
-  <title>Free CBD Dosage Calculator | CBDPure Affiliate Tool</title>
-  <link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBD Dosage Calculator for Anxiety Relief</title>
+  <meta name="description" content="Find your ideal CBD dosage for anxiety based on your weight and anxiety level. Free CBD dosage calculator with affiliate recommendations.">
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(to right, #e0f7f4, #f8fffb);
-      margin: 0;
-      padding: 0;
-      color: #033d33;
-    }
-    header {
-      background-color: #00a67d;
-      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: #f2f8f5;
+      color: #333;
       text-align: center;
-      color: white;
-      font-size: 1.8em;
-      letter-spacing: 1px;
-      font-weight: bold;
+      padding: 30px;
     }
-    main {
-      max-width: 600px;
-      margin: 40px auto;
+    h1 {
+      color: #2b8a3e;
+    }
+    .calculator {
+      background: #fff;
+      max-width: 450px;
+      margin: 0 auto;
       padding: 20px;
-      background: white;
       border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     label {
-      font-weight: bold;
       display: block;
-      margin-top: 15px;
-      color: #055a4e;
+      margin: 15px 0 5px;
+      font-weight: bold;
     }
-    input, select {
+    input, select, button {
       width: 100%;
       padding: 10px;
-      margin-top: 5px;
-      border-radius: 6px;
+      border-radius: 5px;
       border: 1px solid #ccc;
-      font-size: 1em;
     }
     button {
-      background-color: #00a67d;
-      color: white;
+      background: #2b8a3e;
+      color: #fff;
       border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
       cursor: pointer;
-      font-size: 1em;
       margin-top: 20px;
-      width: 100%;
-      transition: background-color 0.3s ease;
     }
     button:hover {
-      background-color: #028b69;
+      background: #256f34;
     }
     .result {
       margin-top: 25px;
       padding: 15px;
-      background-color: #f0fef9;
-      border-left: 5px solid #00a67d;
+      background: #e6f7ed;
       border-radius: 8px;
-      font-size: 1.1em;
     }
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      padding: 20px;
-      background-color: #f7fdfb;
-      font-size: 0.9em;
-    }
-    footer a {
-      color: #00a67d;
+    a.btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #2b8a3e;
+      color: #fff;
+      border-radius: 5px;
       text-decoration: none;
-      font-weight: bold;
     }
-    footer a:hover {
-      text-decoration: underline;
+    a.btn:hover {
+      background: #256f34;
     }
   </style>
 </head>
 <body>
-  <header>
-    Free CBD Dosage Calculator 🌿
-  </header>
-  <main>
-    <h2>Find Your Perfect CBD Dosage</h2>
-    <p>Use this free calculator to determine your ideal CBD dosage for anxiety, relaxation, or overall wellness based on your weight and experience level.</p>
-    
-    <label for="weight">Enter your weight (lbs):</label>
-    <input type="number" id="weight" placeholder="e.g., 150" />
 
-    <label for="strength">Choose CBD strength level:</label>
-    <select id="strength">
-      <option value="low">Low (Mild Anxiety)</option>
-      <option value="medium">Medium (Moderate Anxiety)</option>
-      <option value="high">High (Severe Anxiety)</option>
+  <h1>CBD Dosage Calculator for Anxiety Relief</h1>
+  <p>Use this free tool to find your optimal daily CBD dosage based on your weight and anxiety level.</p>
+
+  <div class="calculator">
+    <label for="weight">Weight (lbs):</label>
+    <input type="number" id="weight" placeholder="e.g. 150">
+
+    <label for="level">Anxiety Level:</label>
+    <select id="level">
+      <option value="mild">Mild</option>
+      <option value="moderate">Moderate</option>
+      <option value="severe">Severe</option>
     </select>
+
+    <label for="strength">CBD Oil Strength (mg per bottle):</label>
+    <input type="number" id="strength" placeholder="e.g. 600">
 
     <button onclick="calculateDosage()">Calculate Dosage</button>
 
-    <div class="result" id="result"></div>
-  </main>
-
-  <footer>
-    <p>🌱 Try our recommended CBD oils for best results:</p>
-    <p><a href="https://www.cbdpure.com/aff/D30F38A4D1289E0197127F931C2D9900/index.html" target="_blank">CBDPure 600</a> | <a href="https://track.revoffers.com/SH4iu" target="_blank">All CBD Products</a></p>
-    <p>© 2025 Free CBD Dosage Calculator – All Rights Reserved.</p>
-  </footer>
+    <div id="result" class="result" style="display:none;"></div>
+  </div>
 
   <script>
     function calculateDosage() {
-      const weight = document.getElementById('weight').value;
-      const strength = document.getElementById('strength').value;
-      let dosagePerPound;
+      const weight = parseFloat(document.getElementById('weight').value);
+      const level = document.getElementById('level').value;
+      const strength = parseFloat(document.getElementById('strength').value);
 
-      if (strength === 'low') dosagePerPound = 0.1;
-      else if (strength === 'medium') dosagePerPound = 0.25;
-      else dosagePerPound = 0.4;
+      if (!weight || !strength) {
+        alert('Please enter all fields.');
+        return;
+      }
 
-      const totalDosage = (weight * dosagePerPound).toFixed(2);
-      document.getElementById('result').innerHTML = 
-        `<strong>Recommended Daily CBD Dosage:</strong> ${totalDosage} mg <br><br>
-        <a href='https://www.cbdpure.com/aff/D30F38A4D1289E0197127F931C2D9900/index.html' target='_blank' style='color:#00a67d;text-decoration:none;font-weight:bold;'>👉 Get CBDPure 600 Here</a>`;
+      let mgPerLb;
+      if (level === 'mild') mgPerLb = 0.1;
+      else if (level === 'moderate') mgPerLb = 0.25;
+      else mgPerLb = 0.45;
+
+      const dailyMg = (weight * mgPerLb).toFixed(2);
+      const perDose = (dailyMg / 2).toFixed(2); // 2 doses per day
+
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('result').innerHTML = `
+        <h3>Your Recommended Dosage</h3>
+        <p><strong>${dailyMg} mg/day</strong> total or <strong>${perDose} mg</strong> twice daily.</p>
+        <p>Based on your input, we recommend:</p>
+        <a href="https://a5059hsztdyfwzr4vix65mhu6g.hop.clickbank.net" target="_blank" class="btn">
+          Buy CBDPure 600mg Oil 🌿
+        </a>
+        <p style="font-size:13px;margin-top:10px;">*Always consult your doctor before starting any new supplement regimen.</p>
+      `;
     }
   </script>
+
 </body>
 </html>
