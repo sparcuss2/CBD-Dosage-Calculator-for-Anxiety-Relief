@@ -1,1 +1,21 @@
-
+{
+  "name": "Free CBD Dosage Calculator",
+  "short_name": "CBD Dosage",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f9f8",
+  "theme_color": "#00bfa5",
+  "description": "Free CBD Dosage Calculator — discover your ideal CBD oil dose by weight, anxiety level, and bottle strength. Includes CBD drop estimator.",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192.png?text=CBD",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/512.png?text=CBD",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
